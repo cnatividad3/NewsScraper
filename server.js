@@ -18,7 +18,10 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsscraper";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+// Set Handlebars.
+var exphbs = require("express-handlebars");
 
 
 // Connect to the Mongo DB
